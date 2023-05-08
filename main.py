@@ -7,9 +7,9 @@ def inicializar_cache(tamanho_cache):
 
 def imprimir_cache(cache):
     print(f"Tamanho cache: {len(cache)}")
-    print("Pos Cache  |    Posição Memória")
+    print(f"Pos Cache{'':<2}|{'':>2}Posição Memória")
     for key, value in cache.items():
-        print(f"{key:>10} |{value:>20}")
+        print(f"{key:>9}{'':<2}|{value:>17}")
     
     print("\n")
 
@@ -37,7 +37,7 @@ def mapeamento_direto(tamanho_cache, pos_memoria):
     
     taxa_acertos = ((hit * 100) / (hit + miss))
 
-    print(f"\nMemórias acessadas: {len(pos_memoria)}\nNúmero de hits: {hit}\nNúmero de misses: {miss}\nTaxa de acertos (hits): {taxa_acertos:.2f}%")    
+    print(f"Memórias acessadas: {len(pos_memoria)}\nNúmero de hits: {hit}\nNúmero de misses: {miss}\nTaxa de acertos (hits): {taxa_acertos:.2f}%")    
 
 tamanho_cache = 5
 pos_memoria = [0, 1, 2, 3, 1, 4, 5, 6]
